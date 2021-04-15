@@ -1,0 +1,61 @@
+
+<!DOCTYPE html>
+<html xmlns = "http://www.w3.org/1999/xhtml" lang = "en">
+
+<head>
+	<meta charset="UTF-8">
+	<meta http-equiv="X-UA-Compatible" content="IE=edge">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<title>4x4 Tic Tac Toe</title>
+
+	    <!--css style ref-->
+		<link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+    <h1> 4x4  Tic Tac Toe Game </h1>
+
+    <!--4x4 table by row-->
+   <table>
+		<tr>
+			<td class="cell" id="0"></td>
+			<td class="cell" id="1"></td>
+			<td class="cell" id="2"></td>
+            <td class="cell" id="3"></td>
+		</tr>
+        <tr>
+			<td class="cell" id="4"></td>
+			<td class="cell" id="5"></td>
+            <td class="cell" id="6"></td>
+			<td class="cell" id="7"></td>
+		</tr>
+        <tr>
+			<td class="cell" id="8"></td>
+			<td class="cell" id="9"></td>
+            <td class="cell" id="10"></td>
+			<td class="cell" id="11"></td>
+		</tr>
+        <tr>
+			<td class="cell" id="12"></td>
+			<td class="cell" id="13"></td>
+            <td class="cell" id="14"></td>
+			<td class="cell" id="15"></td>
+		</tr>		
+    </table>
+
+    <!--Game over message-->
+    <div class="gameover">
+		<div class="text"></div>
+    </div>
+    
+    <!--Button to restart game-->
+    <button class="button" onclick="startGame()">Clear Board</button>
+    
+
+<!--Javascript--> 
+<script src="script.js"></script>
+
+</body>
+</html> 
+
+
