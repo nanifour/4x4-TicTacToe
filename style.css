@@ -6,13 +6,16 @@
 
 body{
     font-family: 'Roboto', sans-serif;
+    background-color: #c7dbe6;
+}
+
+.game-container{
     display: flex; /* center everything with flexbox & displays in a row */
     flex-direction: column; /* changes to column */
     align-items: center;  /* center horisontally */
     justify-content: center;    /* center it vertically */
     height: 100vh;
     overflow: hidden; /* no scroll bars showed */  
-    margin: 0;
 }
 
 h1{
@@ -22,32 +25,30 @@ h1{
 /*table configuration*/
 td {
 	border:  3px solid blue;
-	height:  100px;
-	width:  100px;
+	height:  80px;
+	width:  80px;
 	text-align:  center;
-	vertical-align:  middle;
-	font-size:  73px;
-}
-table {
-    position: absolute;
-    left: 50%;
-	top: 100px;
-    margin-left: -195px;
+    background-color: #fff;
+	font-size:  50px;
 }
 
 /*Game button style*/
 .button {
   background-color: blue;
+  cursor: pointer;
+  border: 0;
   border-radius: 15px;
-  color: orange;
-  padding: 15px 32px;
-  text-align: center;
+  color: #fff;
   text-decoration: none;
   font-size: 17px;
-  margin-top: 440px;
+  padding: 15px;
+
 }
 
 button:hover {
-  background-color: orange;
-  color: blue;
+  color: #99ec91;
+}
+
+.rowo{
+    border-top: 0;
 }
