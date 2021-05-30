@@ -4,7 +4,7 @@ const playerOne = 'X';
 const computer = 'O';
 const winningMessageElement = document.getElementById('winningMessage');
 
-//Winning combinations of arrays within an array
+//Winning combos of arrays within an array
 const youWin = [
     //horizontal wins
 	[0, 1, 2, 3],
@@ -26,17 +26,18 @@ const cellElements = document.querySelectorAll('.cell');
 
 startGame();
 
-
 function startGame() {
 	document.querySelector(".gameover").style.display = "none";
 
 	myBoard = Array.from(Array(16).keys()); //4x4 = 16
 
 	for (var i = 0; i < cellElements.length; i++) {
-		cellElements[i].innerText = '';   //clear board
+		cellElements[i].innerText = '';
+		cellElements[i].style.removeProperty('background-color');
 		cellElements[i].addEventListener('click', turnClick, false);  //can click twice
 	}
 }
+
 
 function turnClick(box) {
 	if (typeof myBoard[box.target.id] == 'number') { //if empty 
@@ -72,12 +73,13 @@ function checkWin(board, player) {
 function gameOver(gameWon) {
 	for (let index of youWin[gameWon.index]) {
 		document.getElementById(index).style.backgroundColor =
-			gameWon.player == playerOne ? "blue" : "orange";  //human win = blue and computer win = orange
+			gameWon.player == playerOne ? "#00c2ff" : "#ef233c";  //human win = blue and computer win = orange
 	}
 	for (var i = 0; i < cellElements.length; i++) {
 		cellElements[i].removeEventListener('click', turnClick, false); //no more click
 	}
-    window.alert(gameWon.player == playerOne ? "You win!" : "You lose.");
+	document.getElementById("message").innerHTML = gameWon.player == playerOne ? `You Win!` : `You Lose.`;
+    //window.alert(gameWon.player == playerOne ? "You win!" : "You lose.");
 }
 
 //see which boxes are empty
@@ -90,13 +92,13 @@ function computerPick() {
 	return emptyboxes()[0];
 }
 
-/* 
 //check it there is a tie
 function tie() {
     return [...cellElements].every(cell => {
     return cell.classList.contains(playerOne) || cell.classList.contains(computer)
   })
 }
-*/
+
+
 
 
