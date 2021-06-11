@@ -2,7 +2,7 @@
 
 4x4 Tic Tac Toe game made with HTML, CSS, Javascript.
 
- [![Demo](https://img.shields.io/badge/Demo-informational?style=for-the-badge&logo=github)](nanifour.github.io/4x4-tictactoe/)
+ [![Demo](https://img.shields.io/badge/Demo-informational?style=for-the-badge&logo=github)](https://nanifour.github.io/4x4-TicTacToe/)
 
 ![screenshot](images/game.png)
 
